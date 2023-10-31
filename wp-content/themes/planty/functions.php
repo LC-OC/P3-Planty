@@ -7,11 +7,11 @@ function theme_enqueue_styles()
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css'));
 }
 
-add_filter( 'wp_nav_menu_items', 'link_in_menu');
+add_filter( 'wp_nav_menu_items', 'link_in_menu', 10, 2);
 
-function link_in_menu( $items) {
-      if (is_user_logged_in()) {
-         $items .= '<li class="menu-item" id="link_menu_admin"> <a href="wp-admin/index.php">Admin</a></li>';
+function link_in_menu( $items, $args) {
+       if (is_user_logged_in() && $args->theme_location == 'primary') {
+         $items .= '<li class="menu-item" id="link_menu_admin"> <a href="http://localhost/Planty/wp-admin/">Admin</a></li>';
       } 
 
    return $items;

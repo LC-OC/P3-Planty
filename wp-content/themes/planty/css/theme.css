@@ -73,7 +73,7 @@ div button#wpforms-submit-293 {
  div button#wpforms-submit-517 {
     height: 65px;
     width: 200px;
-    margin-left: 1rem;
+    margin-left: -2rem;
  }
 
 
@@ -119,6 +119,12 @@ div.elementor-element-b93de02 {
     box-shadow: inset 0 -10px 0 rgb(227, 217, 208);
 }
 
+div button#wpforms-submit-806 {
+    height: 65px;
+    width: 200px;
+    margin-left: 1rem;
+ }
+
 
 /* mobile & tablet*/
 
@@ -145,6 +151,7 @@ div.elementor-element-b93de02 {
     .ast-header-break-point .main-header-bar .main-header-bar-navigation ul.main-header-menu {
         border-top-style: none;
     }
+    
 }
 
 @media (max-width: 661px) {
@@ -178,5 +185,22 @@ div.elementor-element-b93de02 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .ast-header-break-point div.ast-primary-header-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ast-header-break-point div.main-navigation ul li.menu-item {
+        height: 2rem;
+        padding: 2rem 0;
+    }
+    .ast-header-break-point div.main-navigation ul  li.order_nav {
+        margin-bottom: 1rem;
+    }
+
+    .ast-header-break-point div.main-navigation ul  li.order_nav a {
+        margin-top: -0.5rem;
+        border-radius: 10px;
     }
 }
